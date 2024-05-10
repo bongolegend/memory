@@ -20,7 +20,7 @@ source venv/bin/activate
 ```
 pip install pip-tools
 ```
-- install deps
+- install deps from the lock files
 ```
 pip install -r requirements/dev.txt
 pip install -r requirements/prod.txt
