@@ -22,8 +22,8 @@ pip install pip-tools
 ```
 - install deps
 ```
-python -m pip install -r requirements/dev.txt
-python -m pip install -r requirements/prod.txt
+pip install -r requirements/dev.txt
+pip install -r requirements/prod.txt
 ```
 - add new deps to `requirements/*.in`, then run this to recompile the lock files (you'll need to reinstall deps again)
 ```
