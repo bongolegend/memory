@@ -24,7 +24,7 @@ pip install pip-tools
 ```
 python -m pip install -r requirements/dev.txt
 python -m pip install -r requirements/prod.txt
-
+```
 - add new deps to `requirements/*.in`, then run this to recompile the lock files (you'll need to reinstall deps again)
 ```
 pip-compile requirements/prod.in --output-file=requirements/prod.txt
