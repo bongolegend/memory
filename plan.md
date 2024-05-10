@@ -18,3 +18,11 @@
 - A question is an audio input from the user that needs to be responded to.
 - To distinguish between a question and a memory, the user will press a different button.
 - The app should respond to the question by referencing the memories.
+
+
+# Technical Design
+
+- Parse audio input with Whisper.
+- embed text with [embedding model].
+- store text and embedding in Chroma DB.
+- Generate responses with Coqui TTS.
