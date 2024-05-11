@@ -1,4 +1,3 @@
-from textwrap import dedent
 from faster_whisper import WhisperModel
 
 
@@ -8,7 +7,3 @@ def transcribe(audio_path: str) -> str:
     text = "".join([s.text for s in segments]).lstrip()
     return text
 
-if __name__ == "__main__":
-    text = transcribe("/Users/nico/Downloads/audio-test-10seconds.m4a")
-    print(text)
-    assert text[:22] == "This is a longer audio"
