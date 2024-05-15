@@ -4,6 +4,8 @@
 #
 #    pip-compile --output-file=requirements/prod.txt requirements/prod.in
 #
+blinker==1.8.2
+    # via flask
 cachecontrol==0.14.0
     # via firebase-admin
 cachetools==5.3.3
@@ -14,9 +16,13 @@ cffi==1.16.0
     # via cryptography
 charset-normalizer==3.3.2
     # via requests
+click==8.1.7
+    # via flask
 cryptography==42.0.7
     # via pyjwt
 firebase-admin==6.5.0
+    # via -r requirements/prod.in
+flask==3.0.3
     # via -r requirements/prod.in
 google-api-core[grpc]==2.19.0
     # via
@@ -42,7 +48,9 @@ google-cloud-core==2.4.1
     #   google-cloud-firestore
     #   google-cloud-storage
 google-cloud-firestore==2.16.0
-    # via firebase-admin
+    # via
+    #   -r requirements/prod.in
+    #   firebase-admin
 google-cloud-storage==2.16.0
     # via firebase-admin
 google-crc32c==1.5.0
@@ -67,6 +75,14 @@ httplib2==0.22.0
     #   google-auth-httplib2
 idna==3.7
     # via requests
+itsdangerous==2.2.0
+    # via flask
+jinja2==3.1.4
+    # via flask
+markupsafe==2.1.5
+    # via
+    #   jinja2
+    #   werkzeug
 msgpack==1.0.8
     # via cachecontrol
 proto-plus==1.23.0
@@ -105,3 +121,5 @@ uritemplate==4.1.1
     # via google-api-python-client
 urllib3==2.2.1
     # via requests
+werkzeug==3.0.3
+    # via flask

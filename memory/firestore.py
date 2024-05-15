@@ -9,3 +9,5 @@ cred = credentials.Certificate(config['GCP_SERVICE_ACCOUNT_JSON_PATH'])
 app = firebase_admin.initialize_app(cred)
 
 db = firestore.client()
+
+TIMESTAMP = firestore.SERVER_TIMESTAMP

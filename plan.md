@@ -10,3 +10,17 @@ The idea is to offer the most basic value add, which is a digital journal. Once 
 # Product Roadmap
 The vision is to allow users to engage with past journal entries intelligently.
 
+# Data model
+
+## Firestore
+namespace: default
+    collection: users
+        id: user-<hash>
+        name: str
+        subcollection: journals
+            id: jour-<hash>
+            name: str
+            subcollection: entries
+                id: entr-<hash>
+                name: str
+                content: str
