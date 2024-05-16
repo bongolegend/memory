@@ -1,5 +1,6 @@
 import requests
-import json
+from memory.config import config
+
 
 class FirestoreClient:
     def __init__(self, base_url):
@@ -73,7 +74,7 @@ class FirestoreClient:
 
 # Example usage:
 if __name__ == '__main__':
-    base_url = 'http://127.0.0.1:5000'  # Adjust the base URL as needed
+    base_url = f'http://127.0.0.1:{config["FLASK_PORT"]}'  # Adjust the base URL as needed
     client = FirestoreClient(base_url)
 
     # Create a user

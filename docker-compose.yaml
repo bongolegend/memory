@@ -1,0 +1,14 @@
+version: '3.9'
+
+services:
+  memory:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: dev
+    ports:
+      - 8000:8000
+    volumes:
+      - ./:/app/
+    command: sh -c "python -m memory.app"
+    restart: on-failure:4

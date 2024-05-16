@@ -126,4 +126,4 @@ def delete_entry(user_id, journal_id, entry_id):
     return jsonify({'success': True}), 200
 
 if __name__ == '__main__':
-    app.run(debug=config["FLASK_DEBUG"], port=config['FLASK_PORT'])
+    app.run(debug=config["FLASK_DEBUG"], host=config["FLASK_HOST"], port=config['FLASK_PORT'])

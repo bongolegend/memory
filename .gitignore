@@ -161,3 +161,4 @@ cython_debug/
 
 # Custom
 config.yaml
+api_keys
