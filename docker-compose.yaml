@@ -1,7 +1,7 @@
 version: '3.9'
 
 services:
-  memory:
+  flask_api:
     build:
       context: .
       dockerfile: Dockerfile
@@ -10,5 +10,15 @@ services:
       - 8000:8000
     volumes:
       - ./:/app/
-    command: sh -c "python -m memory.app"
+    command: sh -c "while true; do sleep 1; done"
     restart: on-failure:4
+    depends_on:
+      - firestore_emulator
+
+  firestore_emulator:
+    image: mtlynch/firestore-emulator
+    environment:
+      - FIRESTORE_PROJECT_ID=dummy-project-id
+      - PORT=8200
+    ports:
+      - 8200:8200
